@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Art Gallery</title>
 
+<style>
+body {
+    font-family: Georgia, serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #d8b47a, #8b5a2b);
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #fff8dc;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 30px;
+}
+
+.art {
+    margin: 25px auto;
+    padding: 15px;
+    width: 250px;
+    background: #f5deb3;
+    border: 6px solid #5c3317;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+
+    background-image:
+    repeating-linear-gradient(
+        45deg,
+        rgba(139,69,19,0.15),
+        rgba(139,69,19,0.15) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+}
+
+.art h3 {
+    color: #4b2e05;
+}
+
+svg {
+    border: 3px solid #5c3317;
+    background-color: #fff8dc;
+}
+</style>
+
+</head>
+<body>
+
+<h1>SVG Art Gallery</h1>
+
+<!-- ART 1 -->
+<div class="art">
+<h3>1. Line and Circle</h3>
+
+<svg width="200" height="300">
+    <line x1="20" y1="250" x2="180" y2="50"
+          stroke="brown" stroke-width="6"/>
+
+    <circle cx="100" cy="150" r="40"
+            fill="gold" stroke="black"/>
+</svg>
+</div>
+
+<!-- ART 2 -->
+<div class="art">
+<h3>2. Circle and Rectangle</h3>
+
+<svg width="200" height="300">
+    <rect x="50" y="90"
+          width="100" height="130"
+          fill="sienna" stroke="black"/>
+
+    <circle cx="100" cy="60"
+            r="35"
+            fill="orange" stroke="black"/>
+</svg>
+</div>
+
+<!-- ART 3 -->
+<div class="art">
+<h3>3. Polyline and Circle</h3>
+
+<svg width="200" height="300">
+    <polyline
+        points="20,250 60,150 100,220 140,110 180,180"
+        fill="none"
+        stroke="darkgreen"
+        stroke-width="5"/>
+
+    <circle cx="100" cy="60"
+            r="25"
+            fill="yellow"
+            stroke="black"/>
+</svg>
+</div>
+
+<!-- ART 4 -->
+<div class="art">
+<h3>4. Polygon and Ellipse</h3>
+
+<svg width="200" height="300">
+    <polygon
+        points="100,30 170,120 130,260 70,260 30,120"
+        fill="skyblue"
+        stroke="black"/>
+
+    <ellipse
+        cx="100"
+        cy="150"
+        rx="35"
+        ry="65"
+        fill="pink"
+        stroke="black"/>
+</svg>
+</div>
+
+<!-- ART 5 -->
+<div class="art">
+<h3>5. Circle, Line and Rectangle</h3>
+
+<svg width="200" height="300">
+
+    <circle cx="100" cy="50"
+            r="30"
+            fill="gold"
+            stroke="black"/>
+
+    <rect x="50" y="100"
+          width="100"
+          height="120"
+          fill="lightgreen"
+          stroke="black"/>
+
+    <line x1="100"
+          y1="220"
+          x2="100"
+          y2="280"
+          stroke="black"
+          stroke-width="5"/>
+</svg>
+</div>
+
+<!-- ART 6 -->
+<div class="art">
+<h3>6. Polyline and Polygon</h3>
+
+<svg width="200" height="300">
+
+    <polyline
+        points="20,220 60,120 100,200 140,90 180,220"
+        fill="none"
+        stroke="blue"
+        stroke-width="5"/>
+
+    <polygon
+        points="100,40 160,100 130,160 70,160 40,100"
+        fill="orange"
+        stroke="black"/>
+</svg>
+</div>
+
+<!-- ART 7 -->
+<div class="art">
+<h3>7. Circle, Rectangle, Polyline, Polygon and Ellipse</h3>
+
+<svg width="200" height="300">
+
+    <circle cx="100" cy="50"
+            r="25"
+            fill="yellow"
+            stroke="black"/>
+
+    <rect x="50"
+          y="90"
+          width="100"
+          height="80"
+          fill="lightgreen"
+          stroke="black"/>
+
+    <ellipse cx="100"
+             cy="220"
+             rx="40"
+             ry="25"
+             fill="pink"
+             stroke="black"/>
+
+    <polyline
+        points="20,280 60,240 100,270 140,230 180,260"
+        fill="none"
+        stroke="blue"
+        stroke-width="4"/>
+
+    <polygon
+        points="100,15 120,45 80,45"
+        fill="red"
+        stroke="black"/>
+</svg>
+
+</div>
+
+</body>
+</html>
