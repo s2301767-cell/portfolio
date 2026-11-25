@@ -6,6 +6,276 @@
 
 <style>
 body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#dff6ff;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,200px);
+    gap:20px;
+    justify-content:center;
+}
+
+canvas{
+    border:1px solid black;
+    background:white;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Canvas Beach Art Gallery</h1>
+
+<div class="gallery">
+
+<canvas id="c1" width="200" height="200"></canvas>
+<canvas id="c2" width="200" height="200"></canvas>
+<canvas id="c3" width="200" height="200"></canvas>
+<canvas id="c4" width="200" height="200"></canvas>
+
+<canvas id="c5" width="200" height="200"></canvas>
+<canvas id="c6" width="200" height="200"></canvas>
+<canvas id="c7" width="200" height="200"></canvas>
+<canvas id="c8" width="200" height="200"></canvas>
+
+</div>
+
+<script>
+
+// =========================
+// 1 SUNSET
+// =========================
+
+let c1=document.getElementById("c1").getContext("2d");
+
+c1.fillStyle="#87CEEB";
+c1.fillRect(0,0,200,100);
+
+c1.fillStyle="#FDB813";
+c1.beginPath();
+c1.arc(100,100,40,0,Math.PI,true);
+c1.fill();
+
+c1.fillStyle="#1E90FF";
+c1.fillRect(0,100,200,100);
+
+
+// =========================
+// 2 PALM TREE
+// =========================
+
+let c2=document.getElementById("c2").getContext("2d");
+
+c2.fillStyle="#87CEEB";
+c2.fillRect(0,0,200,200);
+
+c2.fillStyle="brown";
+c2.fillRect(95,80,10,90);
+
+c2.fillStyle="green";
+
+c2.beginPath();
+c2.arc(100,60,35,0,Math.PI*2);
+c2.fill();
+
+
+// =========================
+// 3 BEACH UMBRELLA
+// =========================
+
+let c3=document.getElementById("c3").getContext("2d");
+
+c3.fillStyle="#f7d794";
+c3.fillRect(0,120,200,80);
+
+c3.fillStyle="red";
+
+c3.beginPath();
+c3.moveTo(50,120);
+c3.lineTo(150,120);
+c3.lineTo(100,60);
+c3.fill();
+
+c3.fillStyle="black";
+c3.fillRect(98,120,4,50);
+
+
+// =========================
+// 4 SAILBOAT
+// =========================
+
+let c4=document.getElementById("c4").getContext("2d");
+
+c4.fillStyle="#4fc3f7";
+c4.fillRect(0,120,200,80);
+
+c4.fillStyle="saddlebrown";
+c4.fillRect(90,50,5,80);
+
+c4.fillStyle="white";
+
+c4.beginPath();
+c4.moveTo(95,50);
+c4.lineTo(150,90);
+c4.lineTo(95,90);
+c4.fill();
+
+c4.fillStyle="brown";
+c4.fillRect(60,100,80,20);
+
+
+// =========================
+// 5 STARFISH
+// =========================
+
+let c5=document.getElementById("c5").getContext("2d");
+
+c5.fillStyle="#e58e26";
+
+c5.beginPath();
+
+c5.moveTo(100,30);
+c5.lineTo(120,80);
+c5.lineTo(175,85);
+c5.lineTo(130,120);
+c5.lineTo(145,175);
+c5.lineTo(100,145);
+c5.lineTo(55,175);
+c5.lineTo(70,120);
+c5.lineTo(25,85);
+c5.lineTo(80,80);
+
+c5.closePath();
+c5.fill();
+
+c5.fillStyle="#d35400";
+
+for(let i=0;i<20;i++){
+
+c5.beginPath();
+
+c5.arc(
+40+Math.random()*120,
+50+Math.random()*100,
+2,
+0,
+Math.PI*2
+);
+
+c5.fill();
+
+}
+
+
+// =========================
+// 6 TROPICAL FISH
+// =========================
+
+let c6=document.getElementById("c6").getContext("2d");
+
+c6.fillStyle="#74b9ff";
+
+c6.beginPath();
+c6.ellipse(100,100,60,30,0,0,Math.PI*2);
+c6.fill();
+
+c6.beginPath();
+c6.moveTo(150,100);
+c6.lineTo(190,80);
+c6.lineTo(190,120);
+c6.fill();
+
+c6.fillStyle="black";
+
+c6.beginPath();
+c6.arc(70,95,3,0,Math.PI*2);
+c6.fill();
+
+
+// =========================
+// 7 JELLYFISH
+// =========================
+
+let c7=document.getElementById("c7").getContext("2d");
+
+c7.fillStyle="#a29bfe";
+
+c7.beginPath();
+c7.arc(100,80,45,Math.PI,0);
+c7.fill();
+
+c7.fillRect(55,80,90,45);
+
+c7.strokeStyle="#6c5ce7";
+c7.lineWidth=3;
+
+for(let i=0;i<6;i++){
+
+let x=60+(i*15);
+
+c7.beginPath();
+
+c7.moveTo(x,125);
+
+c7.bezierCurveTo(
+x-10,145,
+x+10,165,
+x,190
+);
+
+c7.stroke();
+
+}
+
+c7.fillStyle="white";
+
+c7.beginPath();
+c7.arc(85,70,4,0,Math.PI*2);
+c7.fill();
+
+c7.beginPath();
+c7.arc(115,70,4,0,Math.PI*2);
+c7.fill();
+
+
+// =========================
+// 8 TROPICAL ISLAND
+// =========================
+
+let c8=document.getElementById("c8").getContext("2d");
+
+c8.fillStyle="#87CEEB";
+c8.fillRect(0,0,200,200);
+
+c8.fillStyle="#f5cd79";
+
+c8.beginPath();
+c8.arc(100,170,70,Math.PI,0);
+c8.fill();
+
+c8.fillStyle="brown";
+c8.fillRect(98,70,8,70);
+
+c8.fillStyle="green";
+
+c8.beginPath();
+c8.arc(102,60,30,0,Math.PI*2);
+c8.fill();
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas Beach Art Gallery</title>
+
+<style>
+body{
     font-family:Arial, sans-serif;
     text-align:center;
     background:#eaf8ff;
