@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rose Life Cycle</title>
+
+<style>
+body{
+    background:#f4f1ea;
+    text-align:center;
+    font-family:Georgia, serif;
+}
+
+svg{
+    background:white;
+    border:3px solid #555;
+}
+</style>
+</head>
+
+<body>
+
+<h2>The Life Cycle of a Rose</h2>
+
+<svg width="300" height="300" viewBox="0 0 300 300">
+
+    <!-- Stem -->
+
+    <path d="M150 240 Q150 180 150 120"
+          fill="none"
+          stroke-width="8">
+
+        <animate
+        attributeName="stroke"
+        values="#228B22;#6b4f2a;#228B22"
+        dur="10s"
+        repeatCount="indefinite"/>
+
+        <animate
+        attributeName="d"
+        values="
+        M150 240 Q150 180 150 120;
+        M150 240 Q180 180 180 140;
+        M150 240 Q150 180 150 120"
+        dur="10s"
+        repeatCount="indefinite"/>
+
+    </path>
+
+    <!-- Left Leaf -->
+
+    <ellipse cx="130"
+             cy="190"
+             rx="18"
+             ry="10">
+
+        <animate
+        attributeName="fill"
+        values="#2ecc71;#6b4f2a;#2ecc71"
+        dur="10s"
+        repeatCount="indefinite"/>
+
+    </ellipse>
+
+    <!-- Right Leaf -->
+
+    <ellipse cx="170"
+             cy="170"
+             rx="18"
+             ry="10">
+
+        <animate
+        attributeName="fill"
+        values="#2ecc71;#6b4f2a;#2ecc71"
+        dur="10s"
+        repeatCount="indefinite"/>
+
+    </ellipse>
+
+    <!-- Rose Head Group -->
+
+    <g>
+
+        <animateTransform
+        attributeName="transform"
+        type="rotate"
+        values="
+        0 150 120;
+        55 150 120;
+        0 150 120"
+        dur="10s"
+        repeatCount="indefinite"/>
+
+        <!-- Center Petal -->
+
+        <circle cx="150"
+                cy="100"
+                r="22">
+
+            <animate
+            attributeName="fill"
+            values="
+            #ff1e56;
+            #551111;
+            #ff1e56"
+            dur="10s"
+            repeatCount="indefinite"/>
+
+        </circle>
+
+        <!-- Petals -->
+
+        <circle cx="132"
+                cy="95"
+                r="15">
+
+            <animate
+            attributeName="fill"
+            values="
+            #ff4f7b;
+            #4a2a2a;
+            #ff4f7b"
+            dur="10s"
+            repeatCount="indefinite"/>
+        </circle>
+
+        <circle cx="168"
+                cy="95"
+                r="15">
+
+            <animate
+            attributeName="fill"
+            values="
+            #ff4f7b;
+            #4a2a2a;
+            #ff4f7b"
+            dur="10s"
+            repeatCount="indefinite"/>
+        </circle>
+
+        <circle cx="150"
+                cy="82"
+                r="14">
+
+            <animate
+            attributeName="fill"
+            values="
+            #ff6b8a;
+            #3a3a3a;
+            #ff6b8a"
+            dur="10s"
+            repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Dropping Petal -->
+
+        <ellipse cx="178"
+                 cy="108"
+                 rx="8"
+                 ry="12">
+
+            <animate
+            attributeName="fill"
+            values="
+            #ff4f7b;
+            #4a2a2a;
+            #ff4f7b"
+            dur="10s"
+            repeatCount="indefinite"/>
+
+            <animate
+            attributeName="cy"
+            values="
+            108;
+            230;
+            108"
+            dur="10s"
+            repeatCount="indefinite"/>
+
+            <animate
+            attributeName="opacity"
+            values="
+            1;
+            0.2;
+            1"
+            dur="10s"
+            repeatCount="indefinite"/>
+
+        </ellipse>
+
+    </g>
+
+    <!-- Ground -->
+
+    <line
+    x1="90"
+    y1="250"
+    x2="210"
+    y2="250"
+    stroke="#654321"
+    stroke-width="3"/>
+
+</svg>
+
+</body>
+</html>
